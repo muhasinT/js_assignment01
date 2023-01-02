@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+HTML FORM
+<form onsubmit="forName();return false" action="#" >
+    <label for="forname">Name</label>
+    <input type="text"id="forname" name="forname" >
+    <span id="nameError">Please enter name</span>
+    email: <input type="text" id="formail">
+    phone: <input type="number " id="fornumber" name="fornumber">
+   
+    <div id="forText">
+        
+    </div>
+
+    <button>Submit</button>
+
+    <script>
+
+        document.getElementById("nameError").style.display='none';
+
+    function forName(){
+        
+        var name=document.getElementById("forname").value;
+       
+       if(name==null || name == ''){
+        document.getElementById("nameError").style.display='block';
+        document.getElementById("forname").style.border='solid 1px red';
+       }
+
+        document.getElementById("forText").innerHTML= name + " ";
+
+        var maile=document.getElementById("formail").value;
+
+        document.getElementById("forText").innerHTML += maile + " " ;
+
+        var number=document.getElementById("fornumber").value;
+
+        document.getElementById("forText").innerHTML += number 
+    }
+
+        
+     </script>
+
+
+</form>
+</body>
+</html>
