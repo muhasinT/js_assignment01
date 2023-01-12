@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Addition of two numbers</h2>
+    Eenter the first number:
+    <input type="text" id="firstNumber" name="firstNumber"><br>
+        Eenter the second number:
+    <input type="text" id="secondNumber" name="secondNumber"><br>
+    <button onclick="numberSum();" >click</button>
+
+    <h2 id="result1" style="color: blue;"></h2>    
+    <h2 id="result2" style="color: #ff0000;"></h2>   
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+           function numberSum(){
+
+                var num1 = $("#firstNumber").val();
+
+                var x = Number.parseInt(num1) ;
+
+                var num2 =$("#secondNumber").val();
+
+                var y = Number.parseInt(num2);
+
+            if (x == y){
+
+                let result = (x + y) * 3 ;
+                
+                $("#result1").html("The result is " + result );
+
+            }else{
+
+                let   result = (x + y);
+
+                $("#result2").html("The sum is " + result);
+                }
+            }
+    </script>
+</body>
+</html>

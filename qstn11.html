@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Temperature in Celsius and Fahrenheit</h1>
+
+    Temperature in Fahrenheit:
+    <input type="text" name="tempCelsius" id="tempCelsius">
+    <button id="tempCelsiusBtn">Submit</button><br>
+
+    Temperature in Celsius:
+    <input type="text" name="tempFahrenheit" id="tempFahrenheit">
+    <button onclick="convertFahrenheit();">Submit</button><br> 
+
+    <h2 id="changeCelsius" style="color: red;"></h2>
+
+    <h2 id="changeFahrenheit" style="color: green;"></h2>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+
+    $("#tempCelsiusBtn").click( function (e){
+        
+        const f =$("#tempCelsius").val();
+
+        let result = ((f - 32)/9) * 5;
+
+        $("#changeCelsius").html(f + "°F is " + result + "°C");
+    })
+
+    function convertFahrenheit(){
+
+        var c = $("#tempFahrenheit").val();
+
+        let result = ((9) * (c/5)) + 32 ;
+        
+      $("#changeFahrenheit").html(c + "°C is" + result +"°F") ;
+
+    }
+</script>
+</body>
+</html>

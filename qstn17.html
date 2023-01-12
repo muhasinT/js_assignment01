@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Absolute diffrence between 19 and a number</h1>
+Enter a number :
+<input type="text" name="inputNumber" id="inputNumber">
+<button id="absoluteDiffrence">click</button>
+
+<h2 id="result1" style="color: darkblue;"></h2>
+<h2 id="result2" style="color: rgb(58, 139, 0);"></h2>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+        $("#absoluteDiffrence").click(function(e){
+
+           var num = $("#inputNumber").val();
+
+            let x = Math.abs(num);
+
+        if(x > 19){
+
+           result = (x - 19) * 3;
+
+            $("#result1").html("The difference is " + result);
+        }else{
+            
+            result =  (19 - x);
+
+            $("#result2").html("The difference is " + result);
+        }
+        })   
+</script>
+</body>
+</html>

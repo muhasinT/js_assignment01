@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Checking given numbers</h1>
+    Enter a number :
+    <input type="text" name="checkNumber" id="checkNumber">
+    <button id="validateNumber">check</button>
+
+    <h2 id="result1" style="color: rgb(18, 233, 79);"></h2>
+    <h2 id="result2" style="color: rgb(13, 3, 102);"></h2>
+    <h2 id="result3" style="color: rgb(241, 14, 14);"></h2>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+            $("#validateNumber").click(function(e){
+
+                    let num = $("#checkNumber").val();
+
+               if(num >= 80 && num <= 120){
+
+                    $("#result1").html("The given numbwer is within 20 digits of 100")
+
+               }else if(num >= 380 && num <= 420){
+
+                    $("#result2").html("The given numbwer is within 20 digits of 400")
+
+               }else{
+
+                    $("#result3").html("The given numbwer is not within 20 digits of 100 or 400")
+               }
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>checking 50 or not</h1>
+    Enter the first Value: 
+    <input type="text" name="firstValue" id="firstValue"><br>
+    
+    Enter the second Value: 
+    <input type="text" name="secondValue" id="secondValue"><br>
+    <button id="checkValue">click</button>
+
+    <h2 id="result1" style="color: darkblue;"></h2>
+    <h2 id="result2" style="color: rgb(139, 0, 0);"></h2>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+            $("#checkValue").click(function(e){
+
+              let  value1 = $("#firstValue").val();
+
+              let x = Number.parseInt(value1);
+              
+              let  value2 = $("#secondValue").val();
+
+              let y= Number.parseInt(value2);
+
+            if(x == 50 || y == 50){
+
+                $("#result1").html(`One Value is '50',So it  is true`)
+
+            }else if(x + y == 50){
+
+                $("#result1").html("Sum is '50' ,So it is true")
+
+            }else{
+
+                $("#result2").html("No value is 50 ,So it is not true")
+
+            }
+            })        
+    </script>
+</body>
+</html>

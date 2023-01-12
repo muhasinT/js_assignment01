@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Extension of file Name</h2>
+<input type="text" id="FileName">
+<button onclick="findFile(); ">submit</button>
+
+<p id="extensnFil" style="color: red;font-size: x-large;"></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    function findFile(){
+        const  extfil = $("#FileName").val();
+
+       var extennsion = extfil.split('.').pop();
+
+       $("#extensnFil").html(extennsion);
+    }
+</script>
+</body>
+</html>

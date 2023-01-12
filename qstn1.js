@@ -1,7 +1,9 @@
 const d = new Date();
+
 var day = d.getDay();
 
 if(day==0){
+    
     day="Sunday";
 
 }else if(day==1){

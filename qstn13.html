@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h2>User Defined Name</h2>
+ PLease enter a text :
+ <input type="text" name="userName" id="userName"><br>
+ PLease enter a value :
+<input type="text" name="useraValue" id="useraValue"><br>
+
+<button id="userBtn">submit</button>
+<p id="userVariable" style="color: blue;font-size: larger;"></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+        $("#userBtn").click(function(e){
+
+        const nme = $("#userName").val();
+
+        const valu = $("#useraValue").val();
+
+        this [nme] = valu ;
+
+        $("#userVariable").html(nme);
+        
+        $("#userVariable").html(valu);
+
+     })
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Multiplication and Division</h1>
+
+First Number :<input  type="text" name="firstNumber" id="firstNumber"><br>
+Second Number :<input  type="text" name="secondNumber" id="secondNumber"><br>
+
+    <button onclick="findMultiplication();">Multiply</button>
+    <button onclick="findDivision()">Divide</button>
+
+    <h2 id="multiplyResult" style="color: blue;"></h2>
+    <h2 id="divideResult" style="color: chartreuse;"></h2>
+
+<script>
+    
+    
+            
+    function findMultiplication(){
+
+       var num1 = document.getElementById("firstNumber").value;
+       var num2 = document.getElementById("secondNumber").value;
+        document.getElementById("multiplyResult").innerHTML ="The result is :" +  num1 * num2;
+}
+
+    function findDivision()
+{ 
+       var num1 = document.getElementById("firstNumber").value;
+       var num2 = document.getElementById("secondNumber").value;
+        document.getElementById("divideResult").innerHTML = "The result is :" + num1 / num2;
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Substraction of 13</h2>
+<input type="text" id="differNum" name="differNum">
+<button onclick="validateNumber();">click</button>
+
+<h2 id="result" style="color:rgb(100, 0, 0);font-size: large;"></h2>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    function validateNumber(){
+        var num = $("#differNum").val();
+
+        if(num > 13){
+
+            result = (num - 13) * 2 ;
+        }else{
+            result = 13 - num ;
+        }
+
+        $("#result").html("Result : " + result);
+    }
+</script>
+</body>
+</html>

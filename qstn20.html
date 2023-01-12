@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>NEGATIVE OR POSITIVE</h1>  
+
+     Enter the first number :
+     <input type="text" name="checkNumber1" id="checkNumber1">
+     Enter the second number :
+     <input type="text" name="checkNumber2" id="checkNumber2"><br>
+     <button id="validatingNumbers">check</button>
+
+    <h2 id="result1" style="color: rgb(4, 106, 48);"></h2>
+    <h2 id="result2" style="color: rgb(255, 0, 0);"></h2>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $("#validatingNumbers").click(function(e){
+
+          let  num1 = $("#checkNumber1").val();
+
+          let  num2 = $("#checkNumber2").val();
+
+          if((num1 > 0 && num2 < 0) || (num1 < 0 && num2 > 0)){
+
+            $("#result1").html("One number is positive and another one is negative")
+
+          }else{
+
+            $("#result2").html("Incorrect entries")
+          }
+        })
+    </script>
+</body>
+</html>

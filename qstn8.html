@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <h2>Guessing Number</h2>
+    <input type="text" id="checkInteger" name="checkInteger">
+    <button onclick="vlidateInteger();">Submit</button>
+
+    <h2 id="randomInteger" style="display: none ; color: blue;"></h2>
+    <h2 id="rndmInteger" style="display: none ; color: #ff0d00;"></h2>
+
+    <script>
+
+        function vlidateInteger() {
+
+        var number = Math.floor((Math.random() * 10) + 1) ;
+
+        var input = document.getElementById('checkInteger').value;
+
+        if(input === number){
+
+            document.getElementById('checkInteger').style.display = 'none'
+
+            document.getElementById('randomInteger').style.display = 'block'
+            
+             document.getElementById('randomInteger').innerHTML = "Good Work"
+        }else{
+
+            document.getElementById('checkInteger').style.display = 'none'
+
+            document.getElementById('rndmInteger').style.display = 'block'
+
+            document.getElementById('rndmInteger').innerHTML = "Not Matched"
+
+        }
+    }
+ </script>
+</div>
+</body>
+</html>
